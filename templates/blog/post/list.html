@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
-{% block title %}IT-NEWS{% endblock %}
+{% block title %}KUN-NEWS{% endblock %}
 {% block content %}
-    <h1>IT-NEWS</h1>
+    <h1>Kun Yangiliklari</h1>
     {% for post in posts %}
         <div class = "post">
             <h2>
@@ -10,6 +10,7 @@
             <p class = "date">
                 Published {{ post.publish }} by {{ post.author }}
             </p>
+            {{ post.body|truncatewords:30|linebreaks }}
 
         </div>
     {% endfor %}
